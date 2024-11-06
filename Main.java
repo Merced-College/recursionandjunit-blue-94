@@ -45,4 +45,31 @@ public class Main {
             return count;
         }
     }
+
+
+    // Very similar to countHi, except with additional check for x before "hi"
+    public static int countHi2(String str) {
+        int count = 0; // Zero because with each new string there is zero "hi"s initially
+        // If last two letters form "hi"
+        if (str.substring(str.length()-2).equals("hi")) {
+            // Increment count
+            count++;
+            // If there is at least 3 letters and if they form "xhi":
+            if (str.length() >= 3 && str.substring(str.length() - 3).equals("xhi")) {
+                // Decrement count to reverse the increment
+                count--;
+            }
+        }
+
+        // If there is only two characters left stop recursion and return count
+        if (str.length() == 2) {
+            return count;
+        }
+
+        // Run countHi2 recursively using the current string without the last letter; 
+        else {
+            count += countHi2(str.substring(0, str.length() - 1));
+            return count;
+        }
+    }
 }

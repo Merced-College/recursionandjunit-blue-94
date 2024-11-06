@@ -53,4 +53,30 @@ public class RecursionTests {
     public void countHiTest5() {
         assertEquals(Main.countHi("xxxxxxxxxxHI"), 0);
     }
+
+    // countHi2 tests (5):
+    @Test
+    public void countHi2Test1() {
+        assertEquals(Main.countHi2("ahixhi"), 1);
+    }
+
+    @Test
+    public void countHi2Test2() {
+        assertEquals(Main.countHi2("ahibhi"), 2);
+    }
+
+    @Test
+    public void countHi2Test3() {
+        assertEquals(Main.countHi2("xhixhi"), 0);
+    }
+
+    @Test
+    public void countHi2Test4() {
+        assertEquals(Main.countHi2("hix"), 1);
+    }
+
+    @Test
+    public void countHi2Test5() {
+        assertEquals(Main.countHi2("xhihi"), 1);
+    }
 }

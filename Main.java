@@ -25,4 +25,24 @@ public class Main {
             return count;
         }
     }
+
+    public static int countHi(String str) {
+        int count = 0; // Zero because with each new string there is zero "hi"s initially
+        // If last two letters form "hi"
+        if (str.substring(str.length()-2).equals("hi")) {
+            // Increment count
+            count++;
+        }
+
+        // If there is only two characters left stop recursion and return count
+        if (str.length() == 2) {
+            return count;
+        }
+
+        // Run countHi recursively using the current string without the last letter; 
+        else {
+            count += countHi(str.substring(0, str.length() - 1));
+            return count;
+        }
+    }
 }

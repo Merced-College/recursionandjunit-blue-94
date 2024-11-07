@@ -72,4 +72,24 @@ public class Main {
             return count;
         }
     }
+
+    public static int strCount(String str, String substring) {
+        int count = 0;
+
+        // If the last n letters (being length of substring) is same as substring increment count
+        if (str.substring(str.length() - substring.length()).equals(substring)) {
+            count++;
+        }
+
+        // Base case: if the string is same length as substring then stop recusrion as afterward occurance of substring is impossible
+        if (str.length() == substring.length()) {
+            return count;
+        }
+
+        // Run recursion and add the returned int to count; then return count
+        else {
+            count += strCount(str.substring(0, str.length() - 1), substring);
+            return count;
+        }
+    }
 }

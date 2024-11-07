@@ -79,4 +79,31 @@ public class RecursionTests {
     public void countHi2Test5() {
         assertEquals(Main.countHi2("xhihi"), 1);
     }
+
+    // strCount tests (5):
+
+    @Test
+    public void strCountTest1() {
+        assertEquals(Main.strCount("catcowcat", "cat"), 2);
+    }
+
+    @Test
+    public void strCountTest2() {
+        assertEquals(Main.strCount("catcowcat", "cow"), 1);
+    }
+
+    @Test
+    public void strCountTest3() {
+        assertEquals(Main.strCount("catcowcat", "dog"), 0);
+    }
+
+    @Test
+    public void strCountTest4() {
+        assertEquals(Main.strCount("sunnydayrealestate", "state"), 1);
+    }
+
+    @Test
+    public void strCountTest5() {
+        assertEquals(Main.strCount("novemberaprilapril", "april"), 2);
+    }
 }

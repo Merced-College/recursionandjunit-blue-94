@@ -92,4 +92,22 @@ public class Main {
             return count;
         }
     }
+
+    public static String stringClean(String str) {
+        
+        // Base case: if there is only one letter then stop recursion
+        if (str.length() == 1) {
+            return str;
+        }
+
+        // If last two letters are the same perform stringClean on the string excluding the last letter
+        if (str.charAt(str.length() - 1) == str.charAt(str.length() - 2 )) {
+            return stringClean(str.substring(0, str.length() - 1));
+        }
+
+        // Otherwise perform stringClean and adding the returned string to the last letter
+        else {
+            return stringClean(str.substring(0, str.length() - 1)) + str.substring(str.length() - 1);
+        }
+    }
 }

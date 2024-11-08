@@ -106,4 +106,30 @@ public class RecursionTests {
     public void strCountTest5() {
         assertEquals(Main.strCount("novemberaprilapril", "april"), 2);
     }
+
+    // stringClean tests (5):
+    @Test
+    public void stringCleanTest1() {
+        assertEquals(Main.stringClean("yyzza"), "yza");
+    }
+
+    @Test
+    public void stringCleanTest2() {
+        assertEquals(Main.stringClean("abbbcdd"), "abcd");
+    }
+
+    @Test
+    public void stringCleanTest3() {
+        assertEquals(Main.stringClean("Hello"), "Helo");
+    }
+
+    @Test
+    public void stringCleanTest4() {
+        assertEquals(Main.stringClean("aaaaaaaaaaaaaaaaa"), "a");
+    }
+
+    @Test
+    public void stringCleanTest5() {
+        assertEquals(Main.stringClean("zzyyopzz"), "zyopz");
+    }
 }
